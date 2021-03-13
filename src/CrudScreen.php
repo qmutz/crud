@@ -3,6 +3,7 @@
 
 namespace Orchid\Crud;
 
+use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Collection;
 use Orchid\Crud\Requests\ActionRequest;
@@ -14,7 +15,6 @@ use Orchid\Screen\Action as ActionButton;
 use Orchid\Screen\Actions\DropDown;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Toast;
-use Exception;
 
 abstract class CrudScreen extends Screen
 {
@@ -152,7 +152,6 @@ abstract class CrudScreen extends Screen
 
         return $action->handle($request->models());
     }
-
 
     /**
      * @param UpdateRequest $request
